@@ -128,3 +128,15 @@ h1 {
 #game-options-form button:hover {
     background-color: #45a049;
 }
+
+/* --- Ajout pour la Phase 2 : Pion sélectionné --- */
+.point.selected {
+    background-color: #ffeb3b; /* Un fond jaune pour montrer la case sélectionnée */
+    border-color: #fbc02d;
+}
+
+.point.selected .piece {
+    box-shadow: 0 0 10px #fbc02d, inset 0 0 5px rgba(0,0,0,0.5);
+    transform: scale(1.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
