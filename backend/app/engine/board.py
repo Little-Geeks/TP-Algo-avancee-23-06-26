@@ -3,27 +3,42 @@
 class FanoronaBoard:
     """
     Représentation du plateau de Fanoron-telo utilisant des Bitboards.
-    - 0 correspond à une case vide.
-    - 1 correspond à la présence d'un pion.
+
+    Convention de numérotation des cases (position = index de bit, LSB = 0) :
+
+        Plateau visuel :           Index des bits :
+            0 --- 1 --- 2              bit 0 | bit 1 | bit 2
+            |  \\ |  /  |              -------+-------+-------
+            |   \\| /   |              bit 3 | bit 4 | bit 5
+            3 --- 4 --- 5              -------+-------+-------
+            |   /|\\    |              bit 6 | bit 7 | bit 8
+            |  / | \\   |
+            6 --- 7 --- 8
+
+    - Un bitboard est un entier 9 bits où le bit i représente la case i.
+    - bit = 0 -> case vide, bit = 1 -> pion présent.
+    - Exemple : case 0 -> 1<<0 = 1 ; case 8 -> 1<<8 = 256.
     """
 
     # --- MASQUES DE VICTOIRE (Alignements de 3) ---
-    # Lignes, Colonnes, Diagonales
-    # Exemple : Ligne du haut (0, 1, 2) = 2^0 + 2^1 + 2^2 = 1 + 2 + 4 = 7
+    # Lignes, Colonnes, Diagonales. 8 alignements gagnants au total.
+    # Chaque masque est la somme des bits des 3 cases composant l'alignement.
     WINNING_MASKS = [
-        0b000000111,  # Ligne Haut (0, 1, 2) = 7
-        0b000111000,  # Ligne Milieu (3, 4, 5) = 56
-        0b111000000,  # Ligne Bas (6, 7, 8) = 448
-        0b010010010,  # Colonne Gauche (0, 3, 6) = 73
-        0b101001001,  # Colonne Milieu (1, 4, 7) = 146
-        0b100100100,  # Colonne Droite (2, 5, 8) = 292
-        0b100010001,  # Diagonale Principale (0, 4, 8) = 273
-        0b001010100   # Diagonale Secondaire (2, 4, 6) = 84
+        0b000000111,  # Ligne Haut       (0, 1, 2) = 7
+        0b000111000,  # Ligne Milieu     (3, 4, 5) = 56
+        0b111000000,  # Ligne Bas        (6, 7, 8) = 448
+        0b001001001,  # Colonne Gauche   (0, 3, 6) = 73
+        0b010010010,  # Colonne Milieu   (1, 4, 7) = 146
+        0b100100100,  # Colonne Droite   (2, 5, 8) = 292
+        0b100010001,  # Diagonale \\     (0, 4, 8) = 273
+        0b001010100,  # Diagonale /      (2, 4, 6) = 84
     ]
 
-    # --- MASQUES D'ADJACENCE (Pour les déplacements) ---
-    # Définit où un pion peut aller depuis une position donnée.
-    # Seules les cases reliées par une ligne sont adjacentes.
+    # --- MASQUES D'ADJACENCE (Pour les déplacements de la Phase 2) ---
+    # Pour chaque case i, donne le bitboard des cases reliées par une ligne.
+    # Topologie : les diagonales ne passent que par le centre (case 4).
+    #   -> Les coins (0, 2, 6, 8) ont 3 voisins ; les bords (1, 3, 5, 7) ont 3 voisins ;
+    #      le centre (4) a 8 voisins.
     ADJACENT_MASKS = {
         0: 0b000011010,  # Connecté à 1, 3, 4 (2^1 + 2^3 + 2^4) = 26
         1: 0b000010101,  # Connecté à 0, 2, 4 = 21
