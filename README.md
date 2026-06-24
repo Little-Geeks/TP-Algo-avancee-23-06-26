@@ -16,7 +16,6 @@
 | ANDRIANTOVOSOA Aina Harentsoa | 19 | ESIIA 4 | Expert en OptimisationIA et Bitboards |
 | RAZANAKOLONA Joanna Tsiafoy | 20 | ESIIA 4 | Product Owner, QA et Rédacteur Technique |
 | FIFALIANASOA Aina Nomenjanahary | 22 | ESIIA 4 | Lead DevOps et Déploiement |
-| RASEHENONJATOVO Ndranto Maël | 25 | ESIIA 4 | Lead Backend & Architecte logique du jeu |
 | RAHANITRINOMENA Heriarimanitra Fitianà | 31 | ESIIA 4 | UI/UX Lead Designer et Développeur Frontend |
 ---
 
