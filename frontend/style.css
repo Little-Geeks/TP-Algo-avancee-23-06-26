@@ -1,0 +1,130 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#main-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+#game-container {
+    width: 90vmin;
+    height: 90vmin;
+    max-width: 500px;
+    max-height: 500px;
+}
+
+#board {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+#lines {
+    width: 100%;
+    height: 100%;
+    stroke: #aaa;
+    stroke-width: 3;
+}
+
+.point {
+    position: absolute;
+    width: 12%;
+    height: 12%;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #888;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.point:hover {
+    background-color: #e0e0e0;
+}
+
+.point .piece {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+}
+
+.piece.player1 {
+    background-color: #ffffff;
+}
+
+.piece.player2 {
+    background-color: #000000;
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    min-height: 1.5em;
+}
+
+/* Game Menu Styles */
+#game-menu {
+    width: 250px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#game-menu h2 {
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#game-options-form .option-group {
+    margin-bottom: 15px;
+}
+
+#game-options-form label {
+    margin-left: 5px;
+}
+
+#game-options-form select {
+    margin-left: 25px;
+    margin-top: 5px;
+    width: calc(100% - 25px);
+    padding: 5px;
+}
+
+#game-options-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#game-options-form button:hover {
+    background-color: #45a049;
+}

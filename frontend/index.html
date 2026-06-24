@@ -1,13 +1,66 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fanorona Telo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Fanorona Telo - Jeu Web</h1>
-    <div id="status">En attente de connexion avec le moteur de jeu...</div>
+    <h1>Fanoron-telo</h1>
+    <div id="main-container">
+        <div id="game-container">
+            <div id="board">
+                <svg id="lines">
+                    <!-- Horizontal -->
+                    <line x1="10%" y1="10%" x2="90%" y2="10%"/>
+                    <line x1="10%" y1="50%" x2="90%" y2="50%"/>
+                    <line x1="10%" y1="90%" x2="90%" y2="90%"/>
+                    <!-- Vertical -->
+                    <line x1="10%" y1="10%" x2="10%" y2="90%"/>
+                    <line x1="50%" y1="10%" x2="50%" y2="90%"/>
+                    <line x1="90%" y1="10%" x2="90%" y2="90%"/>
+                    <!-- Diagonal -->
+                    <line x1="10%" y1="10%" x2="90%" y2="90%"/>
+                    <line x1="90%" y1="10%" x2="10%" y2="90%"/>
+                </svg>
+                <div class="point" data-index="0" style="top: 10%; left: 10%;"></div>
+                <div class="point" data-index="1" style="top: 10%; left: 50%;"></div>
+                <div class="point" data-index="2" style="top: 10%; left: 90%;"></div>
+                <div class="point" data-index="3" style="top: 50%; left: 10%;"></div>
+                <div class="point" data-index="4" style="top: 50%; left: 50%;"></div>
+                <div class="point" data-index="5" style="top: 50%; left: 90%;"></div>
+                <div class="point" data-index="6" style="top: 90%; left: 10%;"></div>
+                <div class="point" data-index="7" style="top: 90%; left: 50%;"></div>
+                <div class="point" data-index="8" style="top: 90%; left: 90%;"></div>
+            </div>
+        </div>
+        <div id="game-menu">
+            <h2>Game Options</h2>
+            <form id="game-options-form">
+                <div class="option-group">
+                    <input type="radio" id="hvh" name="gameMode" value="hvh" checked>
+                    <label for="hvh">Human vs Human</label>
+                </div>
+                <div class="option-group">
+                    <input type="radio" id="hva" name="gameMode" value="hva">
+                    <label for="hva">Human vs AI</label>
+                    <select id="ai-difficulty" name="difficulty" disabled>
+                        <option value="easy">Easy</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="option-group">
+                    <input type="radio" id="ava" name="gameMode" value="ava">
+                    <label for="ava">AI vs AI</label>
+                </div>
+                <button type="submit">Start New Game</button>
+            </form>
+        </div>
+    </div>
+    <div id="status">Select a game mode and start a new game.</div>
+
     <script src="app.js"></script>
 </body>
 </html>
