@@ -69,7 +69,16 @@ Dépôt Git :
 git clone https://github.com/Little-Geeks/TP-Algo-avancee-23-06-26
 npm install
 npm run dev
+
+cd backend
+ 
+# Créer l'environnement virtuel:
+python3 -m venv venv
+
+# Activer l'environnemet virtuel:
+venv\Scripts\activate.bat
 ```
+- Ouvrir index.html dans un navigateur
 
 ---
 
