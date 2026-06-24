@@ -11,10 +11,13 @@
 
 | Nom complet | Numéro d'étudiant | Classe | Rôle précis pour ce Hackathon |
 |------------|-------------------|---------|-------------------------------|
-| FANOMEZANTSOA Maminirina Aina Fitiavana | À compléter | À compléter | Lead IA |
-| À compléter | À compléter | À compléter | Développeur Frontend |
-| À compléter | À compléter | À compléter | Développeur Backend |
-
+| FANOMEZANTSOA Maminirina Aina Fitiavana | 08 | ESIIA 4 | Lead Backend & Architecte logique du jeu |
+| RAKOTONDRANAIVO Tsiory Mihajanirina | 09 | ESIIA 4 | Développeur Frontend |
+| ANDRIANTOVOSOA Aina Harentsoa | 19 | ESIIA 4 | Développeur Backend |
+| RAZANAKOLONA Joanna Tsiafoy | 20 | ESIIA 4 | Développeur Backend |
+| FIFALIANASOA Aina Nomenjanahary | 22 | ESIIA 4 | Développeur Backend |
+| RASEHENONJATOVO Ndranto Maël | 25 | ESIIA 4 | Développeur Backend |
+| RAHANITRINOMENA Heriarimanitra Fitianà | 31 | ESIIA 4 | Développeur Backend |
 ---
 
 # Section 2 : Description du Travail Réalisé
@@ -44,11 +47,10 @@ Cette application implémente le jeu traditionnel malgache **Fanoron-telo** sur 
 
 ### Frontend
 - HTML5 / CSS3
-- JavaScript / TypeScript
-- React (si utilisé)
+- JavaScript
 
 ### Backend
-- Node.js (si utilisé)
+- Python
 
 ### Intelligence Artificielle
 - Algorithme Minimax
@@ -56,28 +58,18 @@ Cette application implémente le jeu traditionnel malgache **Fanoron-telo** sur 
 
 ## Déploiement
 
-Application en ligne :
-- URL : **[À compléter]**
 
 Dépôt Git :
-- URL : **[À compléter]**
+- URL : https://github.com/Little-Geeks/TP-Algo-avancee-23-06-26
 
 ---
 
 # Section 3 : Guide d'Installation Rapide (3 commandes max)
 
 ```bash
-git clone <url_du_depot>
+git clone https://github.com/Little-Geeks/TP-Algo-avancee-23-06-26
 npm install
 npm run dev
-```
-
-Ou avec un projet Python :
-
-```bash
-git clone <url_du_depot>
-pip install -r requirements.txt
-python main.py
 ```
 
 ---
@@ -87,8 +79,8 @@ python main.py
 ## Outils utilisés
 
 - ChatGPT
-- GitHub Copilot
-- Claude (si utilisé)
+- GLM
+- Claude
 
 ## Utilisation
 
@@ -118,16 +110,16 @@ L'utilisation de ces outils a permis :
 Le plateau est représenté sous forme d'une matrice 3x3 :
 
 ```text
-a1  b1  c1
-a2  b2  c2
-a3  b3  c3
+0  1  2
+3  4  5
+6  7  8
 ```
 
 Chaque case peut contenir :
 
 - 0 : vide
 - 1 : joueur humain
-- -1 : IA
+- 2 : IA
 
 ## Algorithme Minimax
 
@@ -152,7 +144,7 @@ L'algorithme Alpha-Bêta est utilisé afin de réduire le nombre d'états explor
 - Recherche plus profonde
 - Meilleure réactivité de l'IA
 
-## Techniques avancées (si implémentées)
+## Techniques avancées
 
 ### Table de transposition
 
