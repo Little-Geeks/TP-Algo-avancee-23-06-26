@@ -11,13 +11,13 @@
 
 | Nom complet | Numéro d'étudiant | Classe | Rôle précis pour ce Hackathon |
 |------------|-------------------|---------|-------------------------------|
-| FANOMEZANTSOA Maminirina Aina Fitiavana | 08 | ESIIA 4 | Lead Backend & Architecte logique du jeu |
-| RAKOTONDRANAIVO Tsiory Mihajanirina | 09 | ESIIA 4 | Développeur Frontend |
-| ANDRIANTOVOSOA Aina Harentsoa | 19 | ESIIA 4 | Développeur Backend |
-| RAZANAKOLONA Joanna Tsiafoy | 20 | ESIIA 4 | Développeur Backend |
-| FIFALIANASOA Aina Nomenjanahary | 22 | ESIIA 4 | Développeur Backend |
-| RASEHENONJATOVO Ndranto Maël | 25 | ESIIA 4 | Développeur Backend |
-| RAHANITRINOMENA Heriarimanitra Fitianà | 31 | ESIIA 4 | Développeur Backend |
+| FANOMEZANTSOA Maminirina Aina Fitiavana | 08 | ESIIA 4 | Lead AI Engeneer - Conception des Algorithmes |
+| RAKOTONDRANAIVO Tsiory Mihajanirina | 09 | ESIIA 4 | Développeur frontend - Interractions et Fonctionalités |
+| ANDRIANTOVOSOA Aina Harentsoa | 19 | ESIIA 4 | Expert en OptimisationIA et Bitboards |
+| RAZANAKOLONA Joanna Tsiafoy | 20 | ESIIA 4 | Product Owner, QA et Rédacteur Technique |
+| FIFALIANASOA Aina Nomenjanahary | 22 | ESIIA 4 | Lead DevOps et Déploiement |
+| RASEHENONJATOVO Ndranto Maël | 25 | ESIIA 4 | Lead Backend & Architecte logique du jeu |
+| RAHANITRINOMENA Heriarimanitra Fitianà | 31 | ESIIA 4 | UI/UX Lead Designer et Développeur Frontend |
 ---
 
 # Section 2 : Description du Travail Réalisé
@@ -170,17 +170,17 @@ Possibilité d'apprentissage basé sur des parties enregistrées.
 
 | Niveau IA | Temps moyen |
 |------------|------------|
-| Facile | À mesurer |
-| Moyen | À mesurer |
-| Difficile | À mesurer |
+| Facile |  |
+| Moyen |  |
+| Difficile |  |
 
 ## Résultats IA vs IA
 
 | Confrontation | Résultat |
 |--------------|-----------|
-| Difficile vs Moyen | À compléter |
-| Moyen vs Facile | À compléter |
-| Difficile vs Facile | À compléter |
+| Difficile vs Moyen |  |
+| Moyen vs Facile |  |
+| Difficile vs Facile |  |
 
 ## Métriques supplémentaires
 
